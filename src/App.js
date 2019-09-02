@@ -34,6 +34,7 @@ class App extends React.Component {
   //   this.setState({quotes: value})
   // }
 
+  
 
   render() {
     const {quotes} = this.state
@@ -42,7 +43,7 @@ class App extends React.Component {
       <Header />
       <QuoteHolder quotes={quotes}
       updateQuotes = {this.updateQuotes} />
-      
+
       <Add  updateQuotes = {this.updateQuotes}/> 
       {/* <Edit editQuotes = {this.editQuotes} /> */}
       <Footer />

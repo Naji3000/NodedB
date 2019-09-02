@@ -53,6 +53,7 @@ const quotes = [
 
 
 
+
 const getQuotes = (req,res) => {
     res.json(quotes)
 }

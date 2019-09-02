@@ -13,6 +13,7 @@ constructor() {
     this.deleteQuotes = this.deleteQuotes.bind(this)
 }
 
+
 editQuotes(id, quote) {
     console.log(id)
     axios

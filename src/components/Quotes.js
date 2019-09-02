@@ -27,6 +27,7 @@ class Quotes extends React.Component{
 
 
     
+    
 
     render(){
 

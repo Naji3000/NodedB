@@ -20,6 +20,7 @@ export default class Add extends Component {
 // componentDidMount(){
 //   axios.put("/api/quotes")
 // }
+
   handleName(e){
     this.setState({name: e.target.value })
   }
