@@ -1,26 +1,54 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer"
+import QuoteHolder from "./components/QuoteHolder"
+import Add from "./components/Add"
+import axios from 'axios'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      quotes: []
+    }
+
+    this.updateQuotes = this.updateQuotes.bind(this)
+    // this.editQuotes = this.editQuotes.bind(this)
+  }
+
+
+  componentDidMount = () => {
+    axios
+    .get("/api/quotes")
+    .then(res => {
+        this.updateQuotes(res.data)
+    })
+  }
+
+  updateQuotes(value){
+    this.setState({quotes: value})
+  }
+  // editQuotes(value) {
+  //   this.setState({quotes: value})
+  // }
+
+
+  render() {
+    const {quotes} = this.state
+    return (
+      <section>
+      <Header />
+      <QuoteHolder quotes={quotes} />
+      <Add  updateQuotes = {this.updateQuotes}/> 
+      {/* <Edit editQuotes = {this.editQuotes} /> */}
+      <Footer />
+      
+      </section>
+      
+    );
+    }
 }
 
 export default App;

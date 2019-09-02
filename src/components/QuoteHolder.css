@@ -1,0 +1,23 @@
+.Container{
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    border: 16px;
+    border-style: ridge;
+    border-radius: 40px;
+    border-color: lightgreen;
+    background-color: rgba(255, 235, 205, 0.781);
+    height: 40vh;
+    width: 60vw;
+    overflow: scroll;
+    font-size: 12px;
+    /* animation: glowing 3000ms infinite; */
+}
+/* @keyframes glowing {
+    0% { box-shadow: 0 0 -20px #47eb62; }
+    40% { box-shadow: 0 0 40px #47eb62; }
+    60% { box-shadow: 0 0 40px #47eb62; }
+    100% { box-shadow: 0 0 -20px #47eb62; }
+    } */

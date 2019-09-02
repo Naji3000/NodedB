@@ -1,0 +1,47 @@
+.input{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+
+}
+.input-buttons{
+    border: 1px;
+    border-style: ridge;
+    margin-left: 8px;
+    height: 20px;
+    animation: glowing 1000ms infinite;
+}
+
+@keyframes glowing {
+    0% { box-shadow: 0 0 -10px #faf766; }
+    40% { box-shadow: 0 0 20px #faf766; }
+    60% { box-shadow: 0 0 20px #faf766; }
+    100% { box-shadow: 0 0 -10px #faf766; }
+}
+
+.input-buttons-2{
+    border: 1px;
+    border-style: ridge;
+    margin-left: 8px;
+    height: 20px;
+    animation: glowing 1000ms infinite;
+}
+
+@keyframes glowing {
+    0% { box-shadow: 0 0 -10px #faf766; }
+    40% { box-shadow: 0 0 20px #faf766; }
+    60% { box-shadow: 0 0 20px #faf766; }
+    100% { box-shadow: 0 0 -10px #faf766; }
+}
+
+.Submit-Button{
+    margin-left: 20px;
+    border: 1px;
+    border-radius: 8px;
+}
+
+
+    
+    /* .quote-button {
+        
+    } */

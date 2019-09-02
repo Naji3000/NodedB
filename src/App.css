@@ -1,33 +1,54 @@
-.App {
+body{
+  background-color: rgb(184, 87, 119)
+}
+header{
   text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  font-family: 'Cinzel', serif;
+  font-style: italic;
+  font-size: 50px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  color: azure
 }
 
-.App-link {
-  color: #61dafb;
+footer {
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  font-style: italic;
+  font-size: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: azure
+}
+.glow {
+  
+    animation: neon6 .5s infinite alternate;
 }
 
-@keyframes App-logo-spin {
+@keyframes neon6 {
   from {
-    transform: rotate(0deg);
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ff00de, 0 0 70px #ff00de, 0 0 80px #ff00de, 0 0 100px #ff00de, 0 0 150px #ff00de;
   }
   to {
-    transform: rotate(360deg);
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff00de, 0 0 35px #ff00de, 0 0 40px #ff00de, 0 0 50px #ff00de, 0 0 75px #ff00de;
   }
 }
+
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  margin-top: 3px;
+  animation: glowing 3000ms infinite;
+}
+
+  @keyframes glowing {
+    0% { box-shadow: 0 0 -10px #47eb62; }
+    40% { box-shadow: 0 0 20px #47eb62; }
+    60% { box-shadow: 0 0 20px #47eb62; }
+    100% { box-shadow: 0 0 -10px #47eb62; }
+  }
+  
