@@ -20,29 +20,32 @@ class Quotes extends React.Component{
 
     }
     
-    toggleDisplay(e){
+    toggleDisplay(){
         this.setState({displayInput: !this.state.displayInput})
     
     }
+
+
     
 
     render(){
 
         const  {id} = this.props
+        // console.log(this.state)
     return(
         
         <div>
                 
             {
-            this.displayInput
+            this.state.displayInput
                 ?
     
                 <div>
-                    <input onChange={this.handleInput}/>
+                    <input className='edit-2' onChange={this.handleInput}/>
                     <button onClick={() => {
                     this.props.editQuotes(id, this.state.newQuote)
                     this.toggleDisplay()
-                    }}>Edit2</button>
+                    }} className='edit-2'>Be Positive</button>
                 </div>
                 :
                     <h3>{this.props.quote}</h3>
@@ -58,7 +61,7 @@ class Quotes extends React.Component{
             <div className="content-button">
             
             <button onClick={() => {this.toggleDisplay()}}>Edit</button>
-            <button>Delete</button>
+            <button onClick ={() => {this.props.deleteQuotes(id)}}>Delete</button>
             </div>
             
         </div>

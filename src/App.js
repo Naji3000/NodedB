@@ -40,7 +40,9 @@ class App extends React.Component {
     return (
       <section>
       <Header />
-      <QuoteHolder quotes={quotes} />
+      <QuoteHolder quotes={quotes}
+      updateQuotes = {this.updateQuotes} />
+      
       <Add  updateQuotes = {this.updateQuotes}/> 
       {/* <Edit editQuotes = {this.editQuotes} /> */}
       <Footer />

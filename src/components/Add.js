@@ -34,7 +34,8 @@ export default class Add extends Component {
       quote: this.state.quote,
       name: this.state.name
     })
-    .then(res => {this.props.updateQuotes(res.data)} )
+    .then(res => {this.props.updateQuotes(res.data)
+    })
 
   }
 

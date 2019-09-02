@@ -10,35 +10,26 @@ constructor() {
     quotes: []
     }
     this.editQuotes = this.editQuotes.bind(this)
+    this.deleteQuotes = this.deleteQuotes.bind(this)
 }
 
 editQuotes(id, quote) {
+    console.log(id)
     axios
-    .put("/api/quotes/" + id, { quote })
-    .then(response => {
-    this.setState({
-    quotes: response.data
-    })
-})
-                
+    .put(`/api/quotes/${id}`, { quote })
+    .then(res => { this.props.updateQuotes(res.data)
+    
+    })             
 }
-
-
 
 deleteQuotes(id){
     axios
-    .delete("/api/quotes/" +id )
-    .then(res => {
-        this.setState({
-            quotes: res.data
-        })
+    .delete(`/api/quotes/${id}`)
+    .then(res => { this.props.updateQuotes(res.data)
+        
     })
 
 }
-
-        
-
-
 
     render(){
         return(
@@ -53,9 +44,9 @@ deleteQuotes(id){
                         quote={el.quote}
                         editQuotes = {this.editQuotes} 
                         name={el.name}
-                        id = {this.props.id}
+                        id = {el.id}
                         newQuotes = {this.props.newQuotes}
-                        deleteQuote = {this.deleteQuotes}
+                        deleteQuotes = {this.deleteQuotes}
                         /> 
                         
                         )

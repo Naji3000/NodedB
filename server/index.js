@@ -6,8 +6,10 @@ app.use(express.json())
 
 app.get("/api/quotes", quoteController.getQuotes)// read
 app.post("/api/quotes", quoteController.addQuotes) //create
-app.put(`${"/api/quotes"}/:id` , quoteController.editQuotes)//edit
-app.delete(`${"/api/quotes"}/:id` , quoteController.deleteQuotes) // delete
+
+
+app.put("/api/quotes/:id" , quoteController.editQuotes)//edit
+app.delete("/api/quotes/:id" , quoteController.deleteQuotes) // delete
 
 
 

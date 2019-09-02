@@ -65,17 +65,20 @@ const addQuotes = (req, res) => {
 }
 
 const deleteQuotes = (req, res ) => {
+    console.log(req.params)
     const deleteID = req.params.id
-    quotesIndex = quotes.findIndex( el => el.id == deleteID)
+    const quotesIndex = quotes.findIndex( el => el.id == deleteID)
     quotes.splice(quotesIndex, 1)
     res.status(200).send(quotes)
 }
 
 
 const editQuotes = (req, res) => {
+    console.log(req.body)
     const quoteID = req.params.id
-    quotesIndex = quotes.findIndex(el => el.id == quoteID);
-    quotes [quotesIndex].quote = req.body.quote
+    const quotesIndex = quotes.findIndex(el => el.id == quoteID);
+    console.log(quotesIndex)
+    quotes[quotesIndex].quote = req.body.quote
     res.status(200).send(quotes)
 
 
