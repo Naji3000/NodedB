@@ -16,3 +16,4 @@ app.delete("/api/quotes/:id" , quoteController.deleteQuotes) // delete
 app.listen(3333, () => {
     console.log("Listening on 3333")
 })
+

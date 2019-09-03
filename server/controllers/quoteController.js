@@ -55,14 +55,14 @@ const quotes = [
 
 
 const getQuotes = (req,res) => {
-    res.json(quotes)
+    res.status(200).send(quotes)
 }
 
 
 const addQuotes = (req, res) => {
     const {quote, name } = req.body
     quotes.push({quote, name})
-    res.json(quotes)
+    res.status(200).send(quotes)
 }
 
 const deleteQuotes = (req, res ) => {

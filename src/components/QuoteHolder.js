@@ -18,8 +18,9 @@ editQuotes(id, quote) {
     console.log(id)
     axios
     .put(`/api/quotes/${id}`, { quote })
-    .then(res => { this.props.updateQuotes(res.data)
-    
+    .then(res => { this.props.updateQuotes(res.data)})
+    .catch(error => {
+        console.log(error)
     })             
 }
 
